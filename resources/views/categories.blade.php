@@ -7,7 +7,7 @@
         @foreach($categories as $category)
             <div class="panel">
                 <a href="{{ route('category', $category->code) }}">
-                    <img src="http://laravel-diplom-1.rdavydov.ru/storage/categories/mobile.jpg">
+                    <img width="60px" src="https://images.fixjeiphone.nl/wp-content/uploads/2021/06/Refurbished-iPhone-X-space-grey-1.png">
                     <h2>{{ $category->name }}</h2>
                 </a>
                 <p>
