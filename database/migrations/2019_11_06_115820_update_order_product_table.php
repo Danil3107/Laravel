@@ -13,6 +13,7 @@ class UpdateOrderProductTable extends Migration
      */
     public function up()
     {
+        if(Schema::hasTable('order_product')) return; 
         Schema::table('order_product', function (Blueprint $table) {
             $table->integer('count')->default(1)->after('product_id');
         });

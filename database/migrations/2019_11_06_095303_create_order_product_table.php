@@ -13,6 +13,7 @@ class CreateOrderProductTable extends Migration
      */
     public function up()
     {
+        if(Schema::hasTable('order_product')) return; 
         Schema::create('order_product', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('order_id');
