@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Product;
 use Illuminate\Http\Request;
 
 class BasketController extends Controller
@@ -16,9 +17,18 @@ class BasketController extends Controller
         return view('basket', compact('order'));
     }
 
+    public function basketConfirm(){
+
+    }
+
     public function basketPlace()
     {
-        return view('order');
+        $orderId = session('orderId');
+        if (is_null($orderId)){
+            return redirect()->route('index');
+        } 
+        $order = Order::find($orderId);
+        return view('order', compact('order'));
     }
 
     public function basketAdd($productId)

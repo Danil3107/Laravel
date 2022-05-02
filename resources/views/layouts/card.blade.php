@@ -1,3 +1,4 @@
+
 <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
         <img src="https://images.fixjeiphone.nl/wp-content/uploads/2021/06/Refurbished-iPhone-X-space-grey-1.png" alt="iPhone X 64GB">
