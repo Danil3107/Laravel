@@ -76,7 +76,7 @@ class CategoryController extends Controller
         return redirect()->route('categories.index');
     }
 
-    /** 
+    /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Category  $category
