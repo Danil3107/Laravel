@@ -33,8 +33,7 @@
             </tr>
             <tr>
                 <td>Картинка</td>
-                <td><img src=https://msk.netabc.ru/files/articles_images_files/b/bb/bbo/bbow/content.jpg"
-                         height="240px"></td>
+                <td><img src="{{Storage::url($category->image)}}"></td>
             </tr>
             <tr>
                 <td>Кол-во товаров</td>

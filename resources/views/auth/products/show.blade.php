@@ -33,7 +33,7 @@
             </tr>
             <tr>
                 <td>Картинка</td>
-                <td><img src="https://msk.netabc.ru/files/articles_images_files/b/bb/bbo/bbow/content.jpg" height="240px"></td>
+                <td><img src="{{Storege::url($product->image)}}" height="240px"></td>
             </tr>
             <tr>
                 <td>Категория</td>
