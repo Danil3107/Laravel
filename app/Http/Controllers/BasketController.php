@@ -32,12 +32,13 @@ class BasketController extends Controller
         } else {
             session()->flash('warning', 'Случилась ошибка');
         }
-        
+
         return redirect()->route('index');
     }
 
     public function basketPlace()
-    {        $orderId = session('orderId');
+    {
+        $orderId = session('orderId');
         if (is_null($orderId)) {
             return redirect()->route('index');
         }
@@ -67,8 +68,9 @@ class BasketController extends Controller
             $order->user_id = Auth::id();
             $order->save();
         }
-        
+
         $product = Product::find($productId);
+
         session()->flash('success', 'Добавлен товар ' . $product->name);
 
         return redirect()->route('basket');
@@ -93,7 +95,7 @@ class BasketController extends Controller
         }
 
         $product = Product::find($productId);
-        
+
         session()->flash('warning', 'Удален товар  ' . $product->name);
 
         return redirect()->route('basket');
